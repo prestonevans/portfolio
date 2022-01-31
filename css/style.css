@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300&display=swap');
+:root {
+    --primary-color: rgb(255, 255, 255);
+    --secondary-color: rgb(236, 175, 99);
+    --tertiary-color: rgb(9 32 44);
+    --h1-font-size: clamp(3.3rem, 14vw, 8rem);
+    --h2-font-size: clamp(1.4rem, 6vw, 3.4rem);
+    --header-font-family: 'Alegreya Sans', sans-serif;
+    --padding: 1rem;
+    --transition: .2s ease-in;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image:url('../images/mountains-5536397_1920.jpg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-color: var(--tertiary-color);
+    font-family: var(--header-font-family);
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--primary-color);
+    align-items: center;
+    min-height: 100vh;
+}
+h1,h2,h3 {
+    font-weight: 400;
+    font-family: var(--header-font-family);
+}
+h1 {
+    font-weight: 400;
+    font-size: var(--h1-font-size);
+    animation-name: scale;
+    animation-duration: .3s;
+}
+h2 {
+    font-size: var(--h2-font-size);
+    font-weight: 300;
+    margin-top: -.5em;
+    opacity: 0;
+    transform: translateX(-100px);
+    animation-name: ltr;
+    animation-fill-mode: forwards;
+    animation-duration: .4s;
+    animation-delay: .1s;
+}
+h3 {
+    font-weight: 400;
+    font-size: clamp(2.25rem, 8vmin, 6rem);
+}
+h4 {
+    font-weight: 400;
+    font-size: clamp(2rem, 6vmin, 4rem);
+    color: var(--tertiary-color);
+}
+.light {
+    font-weight: 100;
+    font-style: italic;
+}
+.icons {
+    position: absolute;
+    top: var(--padding);
+    right: var(--padding);
+}
+.icons i {
+    color: var(--primary-color);
+    font-size: clamp(1.75rem, 5vw, 3rem);
+    transition: color var(--transition);
+    opacity: 0;
+    transform: translateY(100px);
+    animation-name: up;
+    animation-fill-mode: forwards;
+}
+.icons a:nth-child(1) i {
+    animation-duration: .3s;
+}
+.icons a:nth-child(2) i {
+    animation-duration: .4s;
+}
+.icons a:nth-child(3) i {
+    animation-duration: .5s;
+}
+.icons i:hover {
+    color: #ecaf63;
+}
+.icons a:not(:last-child) {
+    margin-right: .5em;
+}
+
+.location-border {
+    position: relative;
+    min-height: 60vh;
+    color: transparent;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: transparent;
+    clip-path: polygon(0% 5%, 50% 0%, 100% 5%, 100% 95%, 50% 100%, 0% 95%);
+}
+.inside {
+    background-color: rgba(255, 255, 255,.3);
+    color: var(--primary-color);
+    mix-blend-mode: difference;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0% 5%, 50% 0%, 100% 5%, 100% 95%, 50% 100%, 0% 95%);
+    position: absolute;
+    top: var(--padding);
+    bottom: var(--padding);
+    left: var(--padding);
+    right: var(--padding);
+}
+.inside p {
+    font-weight: 300;
+    font-size: clamp(1.5rem, 6vmin, 3.5rem);
+
+}
+.projects {
+    background-color: var(--primary-color);
+    padding: 2rem var(--padding);
+    clip-path: polygon(0px 2rem, 50% 0%, 100% 2rem, 100% calc(100% - 2rem), 50% 100%, 0% calc(100% - 2rem));
+}
+.project {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    align-content: center;
+    gap: 1rem 8rem;
+}
+.project,
+.projects h3 {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.left {
+    flex-basis: 400px;
+    flex-grow: 1;
+}
+.projects h3 {
+    color: var(--secondary-color);
+}
+.project img {
+    width: 100%;
+    transition-property: opacity, transform;
+    transition-timing-function: var(--transition);
+}
+.project img:hover {
+    opacity: .9;
+    transform: scale(1.01);
+}
+.technologies {
+    display: flex;
+    align-items: center;
+    flex-flow: wrap;
+    gap: 0 .75em ;
+    /* justify-content: center; */
+}
+.technologies i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+/* .technologies i:not(:last-child) {
+    margin-right: 1em;
+}
+.technologies i:first-of-type {
+    margin-left: 1em;
+} */
+@keyframes scale {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes ltr {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes up {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
