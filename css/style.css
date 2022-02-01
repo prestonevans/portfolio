@@ -80,12 +80,15 @@ h4 {
     animation-fill-mode: forwards;
 }
 .icons a:nth-child(1) i {
-    animation-duration: .3s;
+    animation-duration: .2s;
 }
 .icons a:nth-child(2) i {
-    animation-duration: .4s;
+    animation-duration: .3s;
 }
 .icons a:nth-child(3) i {
+    animation-duration: .4s;
+}
+.icons a:nth-child(4) i {
     animation-duration: .5s;
 }
 .icons i:hover {
@@ -128,13 +131,15 @@ h4 {
     background-color: var(--primary-color);
     padding: 2rem var(--padding);
     clip-path: polygon(0px 2rem, 50% 0%, 100% 2rem, 100% calc(100% - 2rem), 50% 100%, 0% calc(100% - 2rem));
+    display: flex;
+    flex-direction: column;
+    gap: 2rem ;
 }
 .project {
     display: flex;
     justify-content: space-between;
     flex-flow: wrap;
     align-content: center;
-    gap: 1rem 8rem;
 }
 .project,
 .projects h3 {
@@ -142,7 +147,6 @@ h4 {
     margin: 0 auto;
 }
 .left {
-    flex-basis: 400px;
     flex-grow: 1;
 }
 .projects h3 {
@@ -161,19 +165,20 @@ h4 {
     display: flex;
     align-items: center;
     flex-flow: wrap;
-    gap: 0 .75em ;
-    /* justify-content: center; */
+    gap: 1em ;
 }
 .technologies i {
-    font-size: 2rem;
+    font-size: clamp(1.25rem, 5vw, 2.5rem);
     color: var(--secondary-color);
 }
-/* .technologies i:not(:last-child) {
-    margin-right: 1em;
+.right p {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
 }
-.technologies i:first-of-type {
-    margin-left: 1em;
-} */
+footer {
+    color: var(--primary-color);
+    padding: 1rem;
+    text-align: center;
+}
 @keyframes scale {
     from {
         opacity: 0;
