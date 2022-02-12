@@ -99,7 +99,7 @@ i {
 .icons a:nth-child(4) i {
     animation-duration: .5s;
 }
-.icons i:hover {
+i:hover {
     color: #ecaf63;
 }
 .icons a:not(:last-child) {
