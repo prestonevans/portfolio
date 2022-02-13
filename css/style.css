@@ -80,7 +80,7 @@ h4 {
 .icons i,
 i {
     color: var(--primary-color);
-    font-size: clamp(1.75rem, 5vw, 3rem);
+    font-size: clamp(2rem, 8vw, 3rem);
     transition: color var(--transition);
     opacity: 0;
     transform: translateY(100px);
