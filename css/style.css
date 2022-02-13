@@ -155,7 +155,7 @@ i:hover {
     margin: 0 auto;
 }
 .underline {
-    border-bottom: .25rem solid var(--secondary-color);
+    border-bottom: .09em solid var(--secondary-color);
 }
 .left {
     flex-grow: 1;
